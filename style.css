@@ -116,10 +116,9 @@ main {
 }
 
 
-#profile {
+section {
     padding: 15px 30px;
     background-color:hsla(0, 0%, 0%, 0.9);
-    text-align: justify;
     margin: 0 auto;
     max-width: 900px;
     min-width: 450px;
@@ -127,8 +126,8 @@ main {
 ;
 }
 
-#profile h3,
-#profile h5 {
+section h3,
+section h5 {
     margin-bottom: 0;
     padding: 0;
 }
