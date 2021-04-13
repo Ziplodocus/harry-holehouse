@@ -55,7 +55,7 @@ html, body {
 body {
     font-family: "Nunito";
     padding: 20px;
-    background-image: url("./resources/background-img.jpg");
+    background-image: url("./resources/background-img.png");
     background-position: center;
     background-size: cover;
 }
