@@ -58,6 +58,8 @@ body {
     background-image: url("./resources/background-img.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color:hsla(0, 0%, 0%, 1);
 }
 
 nav {
