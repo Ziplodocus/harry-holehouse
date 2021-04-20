@@ -6,20 +6,25 @@
     <title>Harry Holehouse-Eyre</title>
     <link rel="stylesheet" type="text/css" href="./style.css" >
     <link rel="icon" type="image/png" href="./resources/fav-icon.png">
+    <script src="./scripts/utility.js" defer></script>
 </head>
 
 <body>
+
     <nav>
-        <a class="button" href="./index.html"><h1>Harry Holehouse-Eyre</h1></a>
-        <div class="nav-buttons">
-            <a class="button" href="#profile">Profile</a>
-            <a class="button" href="./projects.html">Projects</a>
-            <a class="button" href="#contact">Contact<br>Details</a>
-        </div>
+        <button id="homeBtn" type="button" value="home"><h1>Harry Holehouse-Eyre</h1></button>
+        <button id="profileBtn" type="button" value="profile">Profile</button>
+        <button id="projectsBtn" type="button" value="projects">Projects</button>
+        <button id="contactBtn" type="button" value="contact">Contact Details</button>
     </nav>
 
     <main>
-        <section id="profile" class="back-box">
+
+        <section id="home" class="back-box" hidden>
+
+        </section>
+
+        <section id="profile" class="back-box" hidden>
             <h2>Profile</h2>
             <p>A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. </p>
             <h3>Skills</h3>
@@ -57,22 +62,45 @@
             </ul>
         </section>
 
-        <section id="contact" class="back-box">
-            <div class="holder">
-                <h3>Contact Details</h3>
-                <p>Email address: haroldholehouse@gmail.com</p>
-                <p>Phone Number: 07983081640</p>
+        <section id="projects" class="back-box" hidden>
+            <div id="contents">
+                <a href="#art"><span>Art</span></a>
+                <a href="#ziplod"><span>Ziplod the Discord Bot</span></a>
             </div>
-            <div class="holder">
-                <h3>Socials</h3>
-                <div class="socials">
-                    <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/harolair/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
-                    <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
+            <article class="project">
+                <h2>Art</h2>
+                <div id="art">
+                    <figure>
+                        <img>
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article class="project">
+                <h2>Ziplod the Discord Bot</h2>
+                <span><img src=""></span>
+            </article>
+        </section>
+
+        <section id="contact" class="back-box" hidden>
+            <div class="holder-container">
+                <div class="holder">
+                    <h3>Contact Details</h3>
+                    <p>Email address: haroldholehouse@gmail.com</p>
+                    <p>Phone Number: 07983081640</p>
+                </div>
+                <div class="holder">
+                    <h3>Socials</h3>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/harolair/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
+                        <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
 </body>
