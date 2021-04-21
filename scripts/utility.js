@@ -1,25 +1,23 @@
-const homeBtn = document.getElementById("homeBtn");
-const profileBtn = document.getElementById("profileBtn");
-const projectsBtn = document.getElementById("projectsBtn");
-const contactBtn = document.getElementById("contactBtn");
+//Defines buttons and sections from the DOM
+const buttons = document.getElementsByClassName('nav-button');
+const sections = document.getElementsByClassName("content");
 
-const sections = {
-    home: document.getElementById("home"),
-    profile: document.getElementById("profile"),
-    projects:  document.getElementById("projects"),
-    contact: document.getElementById("contact")
-}
-
+//Navigate function shows the section with id = button.value and hides the rest if neccessary
 function navigate() {
-    console.log(this.value);
-    for (section in sections) {
-        sections[section].setAttribute("hidden", "");
+    for (let i = 0; i < sections.length; i++) {
+        let section = sections[i];
+        if (this.value === section.id && section.hasAttribute('hidden')) {
+            console.log(this.value + " shown!");
+            section.removeAttribute('hidden');
+        }
+        else if (!(this.value === section.id) && !section.hasAttribute('hidden')) {
+            console.log(section.id + " hidden");
+            section.setAttribute("hidden", "");
+        }
     }
-    let destination = sections[this.value];
-    destination.removeAttribute('hidden')
 }
 
-homeBtn.addEventListener("click", navigate);
-profileBtn.addEventListener("click", navigate);
-projectsBtn.addEventListener("click", navigate);
-contactBtn.addEventListener("click", navigate);
+//Adds event listeners to all the nav-buttons
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", navigate);
+};
