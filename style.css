@@ -1,9 +1,20 @@
 * {
     color: hsla(0, 0%, 100%, 1);
-    line-height: 1em;
+    line-height: 1.2em;
     margin: 0;
     padding: 0;
     font-family: "Nunito";
+    font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 2.5em;
 }
 
 @font-face {
@@ -67,24 +78,36 @@ nav {
     height: 80px;
     display: flex;
     justify-content: space-around;
+    z-index: 5;
 }
 
-button {
+nav a {
     padding: 0 10px;
-    border: none;
     background-color: hsl(0, 0%, 10%);
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     font-size: 18px;
+    font-weight: 200;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
+    transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1),
+                box-shadow 100ms linear;
 }
 
-button:hover {
+nav a h1 {
+    font-weight: 200;
+    line-height: 1em;
+}
+
+nav a:hover {
     background-color: hsl(0,0%,0%);
+}
+
+nav a:active {
+    box-shadow: 0 0 2px 4px hsla(0, 0%, 10%, 1) inset;
 }
 
 main {
@@ -92,31 +115,75 @@ main {
 }
 
 .back-box {
-    max-width: 900px;
-    min-width: 450px;
-    padding: 15px 30px;
-    background-color: hsla(0, 0%, 0%, 0.8);
-    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: 0 auto;
+    border-radius: 5px;
+    padding: 30px 30px;
+    max-width: 80%;
+    min-width: 400px;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    overflow: hidden;
+    transform: translateY(-250%);
+    transform-box: border-box;
+    transition: transform 1s ease;
+}
+
+.back-box:target {
+    transform: translateY(0);
+}
+
+.back-box ul li {
+    margin-left: 1.5em;
 }
 
 #skills {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 
 .skill-div{
-    min-width: 130px;
-    padding: 0 20px;
+    padding: 0 0.5em;
+    min-width: 100px;
 }
 
-#contact {
-    margin: 30px auto;
+.contents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.figures {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.figures figure {
+    flex: 3 1 300px;
+    text-align: center;
+}
+
+#insta-link {
+    flex: 1 1 75px;
+
+}
+
+#insta-link a img {
+    max-height: 75px;
+    max-width: 75px;
 }
 
 .holder-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .holder {

@@ -6,33 +6,42 @@
     <title>Harry Holehouse-Eyre</title>
     <link rel="stylesheet" type="text/css" href="./style.css" >
     <link rel="icon" type="image/png" href="./resources/fav-icon.png">
-    <script src="./scripts/utility.js" defer></script>
+    <!--<script src="./scripts/utility.js" defer></script>-->
 </head>
 
 <body>
 
     <nav>
-        <button type="button" class="nav-button" value="home"><h1>Harry Holehouse-Eyre</h1></button>
-        <button type="button" class="nav-button" value="profile">Profile</button>
-        <button type="button" class="nav-button" value="projects">Projects</button>
-        <button type="button" class="nav-button" value="contact">Contact Details</button>
+        <a href="#home" class="nav-button"><h1>Harry Holehouse-Eyre</h1></a>
+        <a href="#profile" class="nav-button">Profile</a>
+        <a href="#projects" class="nav-button">Projects</a>
+        <a href="#contact" class="nav-button">Contact Details</a>
     </nav>
 
     <main>
 
-        <section id="home" class="back-box content" hidden>
-
+        <section id="home" class="back-box">
+            <h1>Welcome!</h1>
+            <h3>Think of me as a sort of portfolio and hub for all things Harry!</h3>
+            <h3>I'll be updated usually whenever Harry learns something new or when he's trying to implement something new</h3>
+            <h2>Planned Site Features</h2>
+            <ul>
+                <li>A form on the Contact Details section to send me a message</li>
+                <li>Actual content for the Projects section</li>
+            </ul>
         </section>
 
-        <section id="profile" class="back-box content" hidden>
-            <h2>Profile</h2>
-            <p>A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. </p>
+        <section id="profile" class="back-box">
+            <h1>Profile</h1>
+            <p>
+                A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
+            </p>
             <h3>Skills</h3>
             <div id="skills">
                 <div class="skill-div">
                     <h5>Programming Languages</h5>
                     <ul>
-                        <li>JavaScript inc. Node.js</li>
+                        <li>JavaScript</li>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Bash</li>
@@ -43,8 +52,9 @@
                     <h5>Software</h5>
                     <ul>
                         <li>GIMP</li>
-                        <li>Microsoft Office (Focus on Excel)</li>
+                        <li>Microsoft Office</li>
                         <li>Visual Studio Code</li>
+                        <li>GitHub</li>
                     </ul>
                 </div>
                 <div class="skill-div">
@@ -52,48 +62,66 @@
                     <ul>
                         <li>Self-Motivated</li>
                         <li>Reliable</li>
+                        <li>Honest</li>
                         <li>Problem Solver</li>
                     </ul>
                 </div>
             </div>
-            <h3>Current Goals</h3>
-            <ul>
-                <li>Start my web dev career!</li>
-            </ul>
+            <h3>What's on my agenda?</h3>
+            <p>
+                I'm currently learning intermediate CSS tools as well as the React.js library. I am having fun implementing CSS grid and transitions to really add some flair. Working on some applications just about rounds up the time I have in a day!
+            </p>
+            <h3>What's next for me?</h3>
+            <p>
+                After covering aspects of CSS such as accessability, browser compatibility and responsive design, it'll be time for a recap of CSS fundamentals. During this recap I'll apply my new knowledge to create a mock-up website for a fictional character I've created named Justic. As well as this I'll continue the basics of React.js and move on to JQuery so I can make the most of implementing javaScript.
+            </p>
         </section>
 
-        <section id="projects" class="back-box content" hidden>
-            <div id="contents">
+        <section id="projects" class="back-box">
+            <h1>Projects</h1>
+            <div class="contents">
                 <a href="#art"><span>Art</span></a>
                 <a href="#ziplod"><span>Ziplod the Discord Bot</span></a>
+                <a href="#website"><span>Portfolio Website</span></a>
             </div>
             <article class="project">
-                <h2>Art</h2>
-                <div id="art">
+                <h3>Art</h3>
+                <div class="figures">
                     <figure>
-                        <img>
-                        <figcaption></figcaption>
+                        <img src="" alt="Santa in Edinburgh getting pissed">
+                        <figcaption>Whisky Santa | Winner of internal Christmas Postcard competition</figcaption>
                     </figure>
-                </div>
+                    <figure>
+                        <img src="" alt="Blue blob boy lifts mighty doughnut high in the sky">
+                        <figcaption>Doughnut Lad | This lad sure likes his doughnut, reminds me of me.</figcaption>
+                    </figure>
+                    <figure id="insta-link">
+                        <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png"></a>
+                        <figcaption>Find more on my Instagram</figcaption>
+                    </figure>
+                </div>               
             </article>
             <article class="project">
-                <h2>Ziplod the Discord Bot</h2>
+                <h3>Ziplod the Discord Bot</h3>
                 <span><img src=""></span>
+            </article>
+            <article id="website">
+                <h3>Portfolio Website</h3>
             </article>
         </section>
 
-        <section id="contact" class="back-box content" hidden>
+        <section id="contact" class="back-box">
+            <h1>Contact Details</h1>
             <div class="holder-container">
                 <div class="holder">
-                    <h3>Contact Details</h3>
-                    <p>Email address: haroldholehouse@gmail.com</p>
+                    <p>Email Address: haroldholehouse@gmail.com</p>
+                    <br>
                     <p>Phone Number: 07983081640</p>
                 </div>
                 <div class="holder">
-                    <h3>Socials</h3>
                     <div class="socials">
                         <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
-                        <a href="https://www.instagram.com/harolair/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
+                        <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
                         <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
                         <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
                     </div>
