@@ -3,8 +3,8 @@
 <html>
 
 <head>
-    <title>Harry Holehouse-Eyre</title>
     <link rel="stylesheet" type="text/css" href="./style.css" >
+    <title>Harry Holehouse-Eyre</title>
     <link rel="icon" type="image/png" href="./resources/fav-icon.png">
     <!--<script src="./scripts/utility.js" defer></script>-->
 </head>
@@ -20,7 +20,7 @@
 
     <main>
 
-        <section id="home" class="back-box">
+        <section id="home" class="box">
             <h1>Welcome!</h1>
             <h3>Think of me as a sort of portfolio and hub for all things Harry!</h3>
             <h3>I'll be updated usually whenever Harry learns something new or when he's trying to implement something new</h3>
@@ -31,13 +31,13 @@
             </ul>
         </section>
 
-        <section id="profile" class="back-box">
+        <section id="profile" class="box">
             <h1>Profile</h1>
             <p>
                 A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
             </p>
             <h3>Skills</h3>
-            <div id="skills">
+            <div id="skills" class="box-insert">
                 <div class="skill-div">
                     <h5>Programming Languages</h5>
                     <ul>
@@ -73,44 +73,50 @@
             </p>
             <h3>What's next for me?</h3>
             <p>
-                After covering aspects of CSS such as accessability, browser compatibility and responsive design, it'll be time for a recap of CSS fundamentals. During this recap I'll apply my new knowledge to create a mock-up website for a fictional character I've created named Justic. As well as this I'll continue the basics of React.js and move on to JQuery so I can make the most of implementing javaScript.
+                After covering aspects of CSS such as accessibility, browser compatibility and responsive design, it'll be time for a recap of CSS fundamentals. During this recap I'll apply my new knowledge to create a mock-up website for a fictional character I've created named Justice. As well as this I'll continue the basics of React.js and move on to JQuery so I can make the most of implementing javaScript.
             </p>
         </section>
 
-        <section id="projects" class="back-box">
+        <section id="projects" class="box">
             <h1>Projects</h1>
             <div class="contents">
                 <a href="#art"><span>Art</span></a>
                 <a href="#ziplod"><span>Ziplod the Discord Bot</span></a>
                 <a href="#website"><span>Portfolio Website</span></a>
             </div>
-            <article class="project">
+            <article class="project box-insert">
                 <h3>Art</h3>
-                <div class="figures">
-                    <figure>
-                        <img src="" alt="Santa in Edinburgh getting pissed">
+                <div class="figures-flex">
+                    <figure class="box-in-insert">
+                        <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
                         <figcaption>Whisky Santa | Winner of internal Christmas Postcard competition</figcaption>
                     </figure>
-                    <figure>
-                        <img src="" alt="Blue blob boy lifts mighty doughnut high in the sky">
+                    <figure class="box-in-insert">
+                        <img src="./resources/doughnut.png" alt="Blue blob boy lifts mighty doughnut high in the sky">
                         <figcaption>Doughnut Lad | This lad sure likes his doughnut, reminds me of me.</figcaption>
                     </figure>
-                    <figure id="insta-link">
-                        <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png"></a>
-                        <figcaption>Find more on my Instagram</figcaption>
+                    <figure class="box-in-insert">
+                        <img src="./resources/astroboy.png" alt="astronaut floats like a bee stings like a... wait...">
+                        <figcaption>Astroboy Enjoys Many Dimensions | I'd feel the same way if I were in space</figcaption>
                     </figure>
-                </div>               
+                </div>
+                <a id="insta-link" class="box-in-insert" href="https://www.instagram.com/ziplodocus/" target="_blank">
+                    <img src="./resources/insta-logo.png">
+                    <label>
+                        Find<br>More<br>On<br>Instagram
+                    </label>
+                </a>
             </article>
-            <article class="project">
+            <article class="project box-insert">
                 <h3>Ziplod the Discord Bot</h3>
                 <span><img src=""></span>
             </article>
-            <article id="website">
+            <article id="website" class="project box-insert">
                 <h3>Portfolio Website</h3>
             </article>
         </section>
 
-        <section id="contact" class="back-box">
+        <section id="contact" class="box">
             <h1>Contact Details</h1>
             <div class="holder-container">
                 <div class="holder">
@@ -134,3 +140,6 @@
 </body>
 
 </html>
+
+<!--Required empty script tag to fix chrome bug playing transitions on page load-->
+<script> </script>

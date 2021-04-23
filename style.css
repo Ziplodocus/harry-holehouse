@@ -1,3 +1,5 @@
+/* Styling resets and new defaults*/
+
 * {
     color: hsla(0, 0%, 100%, 1);
     line-height: 1.2em;
@@ -5,17 +7,10 @@
     padding: 0;
     font-family: "Nunito";
     font-weight: 200;
+    text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
-    line-height: 2.5em;
-}
+/*Importing fonts*/
 
 @font-face {
     font-family: 'Nunito';
@@ -62,14 +57,52 @@ h6 {
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/*General stylings*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 10%);;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 0%);
+}
+
 body {
-    background-image: url("./resources/background-img.png");
+    /*background-image: url("./resources/background-img.png");*/
     background-position: start;
     background-size: 100% 800px;
     background-repeat: no-repeat;
-    background-color:hsla(0, 0%, 0%, 1);
+    background-color:hsla(0, 0%, 100%, 1);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 0.8em 0;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+}
+
+/*NAV BAR Stylings*/
 nav {
     position: fixed;
     top: 0;
@@ -110,33 +143,55 @@ nav a:active {
     box-shadow: 0 0 2px 4px hsla(0, 0%, 10%, 1) inset;
 }
 
+/*Aligns rest of page below the nav bar*/
+
 main {
-    margin-top: 90px;
+    margin-top: 100px;
 }
 
-.back-box {
+/*Sets styling for the main content sections*/
+
+.box {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
     border-radius: 5px;
-    padding: 30px 30px;
+    padding: 30px;
     max-width: 80%;
     min-width: 400px;
-    background-color: hsla(0, 0%, 0%, 0.8);
+    background-color: hsl(0, 0%, 40%);
+    box-shadow: 10px 10px 3px 5px hsla(0, 0%, 0%, 0.5);
     overflow: hidden;
     transform: translateY(-250%);
     transform-box: border-box;
     transition: transform 1s ease;
 }
 
-.back-box:target {
+.box:target {
     transform: translateY(0);
 }
 
-.back-box ul li {
+.box ul li {
     margin-left: 1.5em;
 }
+
+.box-insert {
+    background-color:hsl(0, 0%, 30%);
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 7px 7px 2px 4px hsla(0, 0%, 0%, 0.3);
+}
+
+.box-in-insert {
+    padding: 5px;
+    border-radius: 5px;
+    background-color:hsl(0, 0%, 50%);
+    box-shadow: 5px 5px 1px 3px hsla(0, 0%, 0%, 0.1);
+}
+
+/*Profile Styling*/
 
 #skills {
     display: flex;
@@ -150,35 +205,78 @@ main {
     min-width: 100px;
 }
 
+/*Projects Styling*/
+
 .contents {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     align-content: space-around;
 }
 
-.figures {
+.figures-flex {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    align-items: baseline;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: space-between;
 }
 
-.figures figure {
-    flex: 3 1 300px;
+.figures-flex figure {
     text-align: center;
+    margin: 0 10px 15px 10px;
+    max-width: 300px;
+    transition: all 600ms;
+    z-index: 1;
+}
+
+.figures-flex figure:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 2px 5px hsla(0, 0%, 0%, 0.05);
+    z-index: 2;
+}
+
+.figures-flex figure img {
+    max-width: 300px;
+}
+
+.figures-flex figure figcaption {
+    padding: 5px 5px;
 }
 
 #insta-link {
-    flex: 1 1 75px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    transition: all 500ms;
 }
 
-#insta-link a img {
+#insta-link img {
     max-height: 75px;
-    max-width: 75px;
+    flex: 0 1 50px;
 }
+
+#insta-link label {
+    font-weight: 700;
+    line-height: 1.2em;
+    border-left: 2px solid hsla(0, 0%, 100%, 0.4);
+    padding-left: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#insta-link:hover {
+    background-color:hsla(0, 0%, 100%, 0.4);
+}
+
+#insta-link:active {
+    box-shadow: 1px 1px 0 1px hsla(0, 0%, 0%, 0.3);
+}
+
+/*Contact Details Styling*/
 
 .holder-container {
     display: flex;
@@ -203,4 +301,13 @@ main {
     height: 50px;
     width: 50px;
     margin: 10px 10px;
+    transition: all 3s cubic-bezier(0, 2, 1, 1);
+    box-shadow: 0 0 5px 5px hsla(0, 0%, 0%, 0.2);
+    border-radius: 50%;
+    border: 5px solid hsla(0, 0%, 0%, 0.5);
+}
+
+.socials a img:hover {
+    transform: rotate(1080deg);
+    box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.1);
 }
