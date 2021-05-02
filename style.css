@@ -1,17 +1,17 @@
 /* Styling resets and new defaults*/
-
 * {
-    color: hsla(0, 0%, 100%, 1);
-    line-height: 1.2em;
+    color: var(--true-white);
+    line-height: 1.2rem;
     margin: 0;
     padding: 0;
+    font-size: 18px;
     font-family: "Nunito";
     font-weight: 200;
     text-decoration: none;
+    transform-box: border-box;
 }
 
 /*Importing fonts*/
-
 @font-face {
     font-family: 'Nunito';
     font-style: italic;
@@ -57,31 +57,50 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/*General stylings*/
+/*General stylings and variables*/
+
+:root {
+    --true-black:  hsl(0, 0%, 0%);
+    --near-black: hsl(0, 0%, 10%);
+    --charcoal: hsl(0, 0%, 15%);
+    --darker-gray: hsl(0, 0%, 25%);
+    --dark-gray: hsl(0, 0%, 35%);
+    --mid-gray: hsl(0, 0%, 50%);
+    --light-gray: hsl(0, 0%, 60%);
+    --true-white: hsl(0, 0%, 100%);
+    --darken: hsla(0, 0%, 0%, 0.5);
+    --lighten: hsla(0, 0%, 100%, 0.5);    
+    --shadow: hsla(0, 0%, 0%, 0.2);
+    --shadow-2: hsla(0, 0%, 0%, 0.05);
+}
+
+body {
+    --nav-hover: var(--true-black);
+    --accent: var(--near-black);
+    --box-bg-color-1: var(--charcoal);
+    --box-bg-color-2: var(--darker-gray);
+    --box-bg-color-3: var(--dark-gray);
+    --box-shadow: var(--shadow);
+    --box-shadow-up: var(--shadow-2);
+    --border-radius: 0.3rem;
+    background-color: var(--true-white);
+}
 
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: none;
+    background: var(--box-shadow);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 10%);;
-    border-radius: 5px;
+    background: var(--nav-hover);;
+    border-radius: var(--border-radius);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(0, 0%, 0%);
-}
-
-body {
-    /*background-image: url("./resources/background-img.png");*/
-    background-position: start;
-    background-size: 100% 800px;
-    background-repeat: no-repeat;
-    background-color:hsla(0, 0%, 100%, 1);
+    background-color: var(--accent);
 }
 
 h1,
@@ -91,15 +110,16 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    line-height: 1.6em;
-    margin: 0.8em 0;
-    letter-spacing: 0.1em;
+    line-height: 1.6rem;
+    margin: 0.8rem 0;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
 }
 
 h1 {
     font-weight: 400;
     letter-spacing: 0.2em;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 /*NAV BAR Stylings*/
@@ -108,45 +128,44 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 4.5rem;
     display: flex;
     justify-content: space-around;
     z-index: 5;
 }
 
 nav a {
-    padding: 0 10px;
-    background-color: hsl(0, 0%, 10%);
+    padding: 0 0.6rem;
+    background-color: var(--accent);
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
     font-weight: 200;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1),
-                box-shadow 100ms linear;
+                box-shadow 100ms ease-in-out;
 }
 
 nav a h1 {
     font-weight: 200;
-    line-height: 1em;
+    line-height: 1.3rem;
 }
 
 nav a:hover {
-    background-color: hsl(0,0%,0%);
+    background-color: var(--nav-hover);
 }
 
 nav a:active {
-    box-shadow: 0 0 2px 4px hsla(0, 0%, 10%, 1) inset;
+    background-color: var(--accent);
 }
 
 /*Aligns rest of page below the nav bar*/
 
 main {
-    margin-top: 100px;
+    margin-top: 4rem;
 }
 
 /*Sets styling for the main content sections*/
@@ -156,15 +175,13 @@ main {
     left: 0;
     right: 0;
     margin: 0 auto;
-    border-radius: 5px;
-    padding: 30px;
+    padding: 2rem;
     max-width: 80%;
     min-width: 400px;
-    background-color: hsl(0, 0%, 40%);
-    box-shadow: 10px 10px 3px 5px hsla(0, 0%, 0%, 0.5);
+    background-color: var(--box-bg-color-1);
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem var(--box-shadow);
     overflow: hidden;
     transform: translateY(-250%);
-    transform-box: border-box;
     transition: transform 1s ease;
 }
 
@@ -173,22 +190,22 @@ main {
 }
 
 .box ul li {
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
 }
 
 .box-insert {
-    background-color:hsl(0, 0%, 30%);
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 7px 7px 2px 4px hsla(0, 0%, 0%, 0.3);
+    background-color: var(--box-bg-color-2);
+    padding: 0.7rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0.3rem 0.3rem 0.2rem 0.2rem var(--box-shadow);
 }
 
 .box-in-insert {
-    padding: 5px;
-    border-radius: 5px;
-    background-color:hsl(0, 0%, 50%);
-    box-shadow: 5px 5px 1px 3px hsla(0, 0%, 0%, 0.1);
+    padding: 0.35rem;
+    border-radius: var(--border-radius);
+    background-color: var(--box-bg-color-3);
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem var(--box-shadow);
 }
 
 /*Profile Styling*/
@@ -201,7 +218,7 @@ main {
 }
 
 .skill-div{
-    padding: 0 0.5em;
+    padding: 0 0.5rem;
     min-width: 100px;
 }
 
@@ -225,7 +242,7 @@ main {
 
 .figures-flex figure {
     text-align: center;
-    margin: 0 10px 15px 10px;
+    margin: 1rem;
     max-width: 300px;
     transition: all 600ms;
     z-index: 1;
@@ -233,47 +250,47 @@ main {
 
 .figures-flex figure:hover {
     transform: scale(1.1);
-    box-shadow: 6px 6px 2px 5px hsla(0, 0%, 0%, 0.05);
+    box-shadow: 1rem 1rem 0.01rem 0.3rem var(--box-shadow-up);
     z-index: 2;
 }
 
 .figures-flex figure img {
     max-width: 300px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .figures-flex figure figcaption {
-    padding: 5px 5px;
+    padding: 0.2rem;
 }
 
 #insta-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 5rem;
     transition: all 500ms;
 }
 
+#insta-link:hover {
+    filter: saturate(1.5) brightness(1.2);
+}
+
 #insta-link img {
-    max-height: 75px;
-    flex: 0 1 50px;
+    max-height: 4.5rem;
 }
 
 #insta-link label {
     font-weight: 700;
-    line-height: 1.2em;
-    border-left: 2px solid hsla(0, 0%, 100%, 0.4);
-    padding-left: 5px;
-    margin-left: 5px;
+    line-height: 1.1rem;
+    border-left: 2px solid var(--accent);
+    padding-left: 0.3rem;
+    margin-left: 0.3rem;
     cursor: pointer;
-    transition: all 300ms;
-}
-
-#insta-link:hover {
-    background-color:hsla(0, 0%, 100%, 0.4);
 }
 
 #insta-link:active {
-    box-shadow: 1px 1px 0 1px hsla(0, 0%, 0%, 0.3);
+    box-shadow:  none;
+    transform: translate(0.2rem, 0.2rem);
 }
 
 /*Contact Details Styling*/
@@ -285,29 +302,29 @@ main {
 }
 
 .holder {
-    margin: 0 20px;
-    padding: 0;
-    min-width: 162px;
+    width: 45%;
 }
 
 .socials {
+    margin-left: min(10%, 2rem);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    align-content: center;
     flex-wrap: wrap;
 }
 
 .socials a img {
-    height: 50px;
-    width: 50px;
-    margin: 10px 10px;
+    max-width: 3rem;
+    margin: 0.3rem;
     transition: all 3s cubic-bezier(0, 2, 1, 1);
-    box-shadow: 0 0 5px 5px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 0 0.3rem 0.2rem var(--box-shadow);
     border-radius: 50%;
-    border: 5px solid hsla(0, 0%, 0%, 0.5);
+    border: 0.4rem solid var(--accent);
+    flex: 0 1 4rem;
 }
 
 .socials a img:hover {
-    transform: rotate(1080deg);
-    box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.1);
+    transform: rotate(1080deg) scale(0.95);
+    box-shadow: none;
 }
