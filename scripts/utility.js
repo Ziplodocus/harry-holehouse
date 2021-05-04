@@ -1,6 +1,6 @@
 //References to translate variables
 let previous = 1;
-let times = [0, 800, 1100, 1400];
+let times = [0, 800, 1300, 1800];
 const targetPositions = {
     home: '1',
     profile: '2',
