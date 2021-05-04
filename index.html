@@ -6,133 +6,135 @@
     <link rel="stylesheet" type="text/css" href="./style.css" >
     <title>Harry Holehouse-Eyre</title>
     <link rel="icon" type="image/png" href="./resources/fav-icon.png">
-    <!--<script src="./scripts/utility.js" defer></script>-->
-    <link rel="prefetch" href="./resources/astroboy.png" />
-    <link rel="prefetch" href="./resources/doughnut.png" />
-    <link rel="prefetch" href="./resources/Whisky santa.png" />
 </head>
 
 <body>
 
-    <nav>
-        <a href="#home" class="nav-button"><h1>Harry Holehouse-Eyre</h1></a>
-        <a href="#profile" class="nav-button">Profile</a>
-        <a href="#projects" class="nav-button">Projects</a>
-        <a href="#contact" class="nav-button">Contact Details</a>
+    <nav class="section-nav">
+        <a name="home" class="nav-button"><h1>Harry Holehouse-Eyre</h1></a>
+        <a name="profile" class="nav-button">Profile</a>
+        <a name="projects" class="nav-button">Projects</a>
+        <a name="contact" class="nav-button">Contact Details</a>
     </nav>
 
     <main>
-
-        <section id="home" class="box">
-            <h1>Welcome!</h1>
-            <h3>Think of me as a sort of portfolio and hub for all things Harry!</h3>
-            <h2>Planned Site Features</h2>
-            <ul>
-                <li>A form on the Contact Details section to send Harry a message</li>
-                <li>More content for the Projects section</li>
-            </ul>
-        </section>
-
-        <section id="profile" class="box">
-            <h1>Profile</h1>
-            <p>
-                A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
-            </p>
-            <h3>Skills</h3>
-            <div id="skills" class="box-insert">
-                <div class="skill-div">
-                    <h5>Programming Languages</h5>
+        <div class="content-container">
+            <div class="slider">
+                <section id="home" class="box active">
+                    <h1>Welcome!</h1>
+                    <h3>Think of me as a sort of portfolio and hub for all things Harry!</h3>
+                    <h2>Planned Site Features</h2>
                     <ul>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Bash</li>
-                        <li>Git</li>
+                        <li>A form on the Contact Details section to send Harry a message</li>
+                        <li>More content for the Projects section</li>
                     </ul>
-                </div>
-                <div class="skill-div">
-                    <h5>Software</h5>
-                    <ul>
-                        <li>GIMP</li>
-                        <li>Microsoft Office</li>
-                        <li>Visual Studio Code</li>
-                        <li>GitHub</li>
-                    </ul>
-                </div>
-                <div class="skill-div">
-                    <h5>Soft Skills</h5>
-                    <ul>
-                        <li>Self-Motivated</li>
-                        <li>Reliable</li>
-                        <li>Honest</li>
-                        <li>Problem Solver</li>
-                    </ul>
-                </div>
-            </div>
-            <h3>What am I doing next?</h3>
-            <p>
-                After covering aspects of CSS such as accessibility, browser compatibility and responsive design, it'll be time for a recap of CSS fundamentals. During this recap I'll apply my new knowledge to create a mock-up website for a fictional character I've created named Justice. As well as this I'll continue the basics of React.js and move on to JQuery so I can make the most of implementing javaScript.
-            </p>
-        </section>
+                </section>
 
-        <section id="projects" class="box">
-            <h1>Projects</h1>
-            <div class="contents">
-                <a href="#art"><span>Art</span></a>
-                <a href="#ziplod"><span>Ziplod the Discord Bot</span></a>
-                <a href="#website"><span>Portfolio Website</span></a>
-            </div>
-            <article class="project box-insert">
-                <h3>Art</h3>
-                <div class="figures-flex">
-                    <figure class="box-in-insert">
-                        <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
-                        <figcaption>Whisky Santa | Winner of internal Christmas Postcard competition</figcaption>
-                    </figure>
-                    <figure class="box-in-insert">
-                        <img src="./resources/doughnut.png" alt="Blue blob boy lifts mighty doughnut high in the sky">
-                        <figcaption>Doughnut Lad | This lad sure likes his doughnut, reminds me of me.</figcaption>
-                    </figure>
-                    <figure class="box-in-insert">
-                        <img src="./resources/astroboy.png" alt="astronaut floats like a bee stings like a... wait...">
-                        <figcaption>Astroboy Enjoys Many Dimensions | I'd feel the same way if I were in space</figcaption>
-                    </figure>
-                </div>
-                <a id="insta-link" class="box-in-insert" href="https://www.instagram.com/ziplodocus/" target="_blank">
-                    <img src="./resources/insta-logo.png">
-                    <label>
-                        Find<br>More<br>On<br>Instagram
-                    </label>
-                </a>
-            </article>
-            <article class="project box-insert">
-                <h3>Ziplod the Discord Bot</h3>
-                <span><img src=""></span>
-            </article>
-            <article id="website" class="project box-insert">
-                <h3>Portfolio Website</h3>
-            </article>
-        </section>
+                <section id="profile" class="box inactive-right">
+                    <h1>Profile</h1>
+                    <p>
+                        A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
+                    </p>
+                    <h3>Skills</h3>
+                    <div id="skills" class="box-insert">
+                        <div class="skill-div">
+                            <h5>Programming Languages</h5>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bash</li>
+                                <li>Git</li>
+                            </ul>
+                        </div>
+                        <div class="skill-div">
+                            <h5>Software</h5>
+                            <ul>
+                                <li>GIMP</li>
+                                <li>Microsoft Office</li>
+                                <li>Visual Studio Code</li>
+                                <li>GitHub</li>
+                            </ul>
+                        </div>
+                        <div class="skill-div">
+                            <h5>Soft Skills</h5>
+                            <ul>
+                                <li>Self-Motivated</li>
+                                <li>Reliable</li>
+                                <li>Honest</li>
+                                <li>Problem Solver</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>What am I doing next?</h3>
+                    <p>
+                        After covering aspects of CSS such as accessibility, browser compatibility and responsive design, it'll be time for a recap of CSS fundamentals. During this recap I'll apply my new knowledge to create a mock-up website for a fictional character I've created named Justice. As well as this I'll continue the basics of React.js and move on to JQuery so I can make the most of implementing javaScript.
+                    </p>
+                </section>
 
-        <section id="contact" class="box">
-            <h1>Contact Details</h1>
-            <div class="holder-container">
-                <div class="holder">
-                    <p>Email Address: haroldholehouse@gmail.com</p>
-                    <br>
-                    <p>Phone Number: 07983081640</p>
-                </div>
-                <div class="socials holder">
-                    <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
-                    <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
-                </div>
-            </div>
-        </section>
+                <section id="projects" class="box inactive-right">
+                    <h1>Projects</h1>
+                    <nav class="contents">
+                        <a href="#art"><span>Art</span></a>
+                        <a href="#ziplod"><span>Ziplod the Discord Bot</span></a>
+                        <a href="#website"><span>Portfolio Website</span></a>
+                    </nav>
+                    <article class="project box-insert">
+                        <h3>Art</h3>
+                        <div class="figures-flex">
+                            <figure class="box-in-insert">
+                                <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
+                                <figcaption>Whisky Santa | Winner of internal Christmas Postcard competition</figcaption>
+                            </figure>
+                            <figure class="box-in-insert">
+                                <img src="./resources/doughnut.png" alt="Blue blob boy lifts mighty doughnut high in the sky">
+                                <figcaption>Doughnut Lad | This lad sure likes his doughnut, reminds me of me.</figcaption>
+                            </figure>
+                            <figure class="box-in-insert">
+                                <img src="./resources/astroboy.png" alt="astronaut floats like a bee stings like a... wait...">
+                                <figcaption>Astroboy Enjoys Many Dimensions | I'd feel the same way if I were in space</figcaption>
+                            </figure>
+                        </div>
+                        <a id="insta-link" class="box-in-insert" href="https://www.instagram.com/ziplodocus/" target="_blank">
+                            <img src="./resources/insta-logo.png">
+                            <label>
+                                Find<br>More<br>On<br>Instagram
+                            </label>
+                        </a>
+                    </article>
+                    <article class="project box-insert">
+                        <h3>Ziplod the Discord Bot</h3>
+                        <span><img src=""></span>
+                    </article>
+                    <article id="website" class="project box-insert">
+                        <h3>Portfolio Website</h3>
+                    </article>
+                </section>
 
+                <section id="contact" class="box inactive-right">
+                    <h1>Contact Details</h1>
+                    <div class="holder-container">
+                        <div class="holder">
+                            <p>Email Address: haroldholehouse@gmail.com</p>
+                            <br>
+                            <p>Phone Number: 07983081640</p>
+                        </div>
+                        <div class="socials holder">
+                            <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
+                            <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
+                            <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
+                            <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
-
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="./scripts/utility.js"></script>
 </body>
 
 </html>
