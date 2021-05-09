@@ -138,7 +138,7 @@ h6 {
 }
 
 h1 {
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
     font-size: 1.5rem;
 }
 
@@ -159,14 +159,13 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 200;
-        text-align: center;
-        text-decoration: none;
         cursor: pointer;
-        transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1);}
-        .section-nav a h1 {
-            font-weight: 200;
-            line-height: 1.2rem;}
+        transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1);
+        font-size: 1.4rem;
+        font-weight: 200;
+        letter-spacing: 0.08rem;
+        text-align: center;
+        text-decoration: none;}
         .section-nav a:hover {
             background-color: var(--nav-hover);}
         .section-nav a:active {
@@ -176,7 +175,7 @@ h1 {
 
 .content-container {
     position: relative;
-    top: 4.5rem;
+    top: 4rem;
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
@@ -191,20 +190,21 @@ h1 {
         .box {
             flex: 0 0 10%;
             min-width: 45ch;
+            max-width: 100ch;
             padding: 2rem;
             background-color: var(--box-bg-color-1);
-            box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem var(--box-shadow);}
+            box-shadow: 0.5rem 0.5rem 0.1rem 0.2rem var(--box-shadow);}
             .box-insert {
                 background-color: var(--box-bg-color-2);
                 padding: 0.7rem;
                 margin: 1rem 0;
                 border-radius: var(--border-radius);
-                box-shadow: 0.3rem 0.3rem 0.2rem 0.2rem var(--box-shadow);}
+                box-shadow: 0.3rem 0.3rem 0.1rem 0.2rem var(--box-shadow);}
                 .box-in-insert {
                     padding: 0.35rem;
                     border-radius: var(--border-radius);
                     background-color: var(--box-bg-color-3);
-                    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem var(--box-shadow);
+                    box-shadow: 0.2rem 0.2rem 0.1rem 0.2rem var(--box-shadow);
 }
 
 /*Profile Styling*/
@@ -215,9 +215,6 @@ h1 {
     align-items: center;
     align-content: center;
     flex-wrap: wrap;}
-    #skills h3 {
-        margin: 0;
-        width: 100%;}
     .skill-div{
         padding: 0 0.5rem;
         min-width: 100px;
@@ -252,7 +249,7 @@ h1 {
             padding: 0.2rem;}
         .figures-flex figure:hover {
             transform: scale(1.1);
-            box-shadow: 1rem 1rem 0.01rem 0.3rem var(--box-shadow-up);
+            box-shadow: 1rem 1rem 0.3rem 0.3rem var(--box-shadow-up);
             z-index: 2;
 }
 
