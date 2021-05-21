@@ -1,34 +1,28 @@
 //References to translate variables
 let previous = 1;
-let times = [0, 800, 1300, 1800];
-const targetPositions = {
-    "home": "1",
-    "profile": "2",
-    "projects": "3",
-    "contact": "4"
-};
+
 
 //Navigate shows the content associated with nav button
 function navigate(event) {
-    //gets button name value and compares with positions
-    //to receive the reference the the css variable
+    let times = [0, '1500ms', '2000ms', '3000ms'];
+    const targetPositions = {
+        "home": ["1", "-6.175%"],
+        "profile": ["2", "-31.175%"],
+        "projects": ["3", "-56.175%"],
+        "contact": ["4", "-81.175%"]
+    };
+    //retrievs the position associated with the section
     let targetSection = event.currentTarget.name.toString();
-    let targetPosition = '';
-    for (let section in targetPositions) {
-        if(section === targetSection) {
-            targetPosition = targetPositions[section];
-            break
-        }
-    }
-    //Determines which transition timing varibale to pick
-    let translateTime = times[Math.abs(previous - parseInt(targetPositions[targetSection]))].toString();
+    let targetPosition = targetPositions[targetSection];
+    //Determines which transition timing variable to pick
+    let translateTime = times[Math.abs(previous - parseInt(targetPosition[0]))].toString();
     //Changes the translation and timing for consistency
-    $(".slider").css("--nav-time", `var(--translate-${translateTime})`);
-    $(".slider").css("--content-translate", `var(--translate-${targetPosition})`);
+    $(":root").get(0).style.setProperty("--dyn-timing", translateTime);
+    $(":root").get(0).style.setProperty("--dyn-position", targetPosition[1]);
     //Tracks the previous position of the slider
     //so the timing can be extended for further
     //translation
-    previous = parseInt(targetPosition);
+    previous = parseInt(targetPosition[0]);
 }
 
 $(document).ready(() => {
