@@ -22,15 +22,13 @@
             <div class="slider">
                 <section id="home" class="box">
                     <h1>Welcome!</h1>
-                    <h3>Think of me as a portfolio and hub for all things Harry!</h3>
-                    <div class="box-insert">
-                        <h2>Planned Site Features</h2>
-                        <ul>
-                            <li>A form on the Contact Details section to send Harry a message</li>
-                            <li>More content for the Projects section</li>
-                            <li>Add accessibility settings e.g adjustable Font size, colors etc.</li>
-                        </ul>
-                    </div>
+                    <h6>Think of me as a portfolio and hub for all things Harry!</h3>
+                    <h3>Planned Site Features</h3>
+                    <ul>
+                        <li>A form on the Contact Details section to send Harry a message</li>
+                        <li>More content for the Projects section</li>
+                        <li>Add accessibility settings e.g adjustable Font size, colors etc.</li>
+                    </ul>
                 </section>
 
                 <section id="profile" class="box">
@@ -39,7 +37,7 @@
                         A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
                     </p>
                     <h3>Skills</h3>
-                    <div id="skills" class="box-insert">
+                    <div id="skills">
                         <div class="skill-div">
                             <h5>Languages</h5>
                             <ul>
@@ -72,19 +70,23 @@
                     </div>
                     <h3>What am I doing next?</h3>
                     <p>
-                        After covering aspects of CSS such as accessibility, browser compatibility and responsive design, it'll be time for a recap of CSS fundamentals. During this recap I'll apply my new knowledge to create a mock-up website for a fictional character I've created named Justice. As well as this I'll continue the basics of React.js and move on to JQuery so I can make the most of implementing javaScript.
+                        Practicing CSS grid by building a new website, implementing some forms and javaScript to this site and continuing my learning process with frameworks such as Bootstrap and Vue.js.
                     </p>
                 </section>
 
                 <section id="projects" class="box">
                     <h1>Projects</h1>
                     <nav class="contents">
-                        <a href="#art"><span>Art</span></a>
-                        <a href="#ziplod"><span>Ziplod the Discord Bot</span></a>
-                        <a href="#website"><span>Portfolio Website</span></a>
+                        <a href="#website"><h5>Portfolio Website</h5></a>
+                        <a href="#art"><h5>Instagram</h5></a>
+                        <a href="#ziplod"><h5>Ziplod the Discord Bot</h5></a>
+                        <a href="#justice"><h5>Justice - Dummy Site</h5></a>
                     </nav>
+                    <article id="website" class="project box-insert">
+                        <h3>Portfolio Website</h3>
+                    </article>
                     <article class="project box-insert">
-                        <h3>Art</h3>
+                        <h3>Instagram</h3>
                         <div class="figures-flex">
                             <figure class="box-in-insert">
                                 <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
@@ -106,15 +108,29 @@
                             </label>
                         </a>
                     </article>
-                    <article class="project box-insert">
+                    <article id="ziplod" class="project box-insert">
                         <h3>Ziplod the Discord Bot</h3>
                     </article>
-                    <article id="website" class="project box-insert">
-                        <h3>Portfolio Website</h3>
+                    <article id="justice" class="project box-insert">
+                        <h3>Justice - Dummy Site</h3>
                     </article>
                 </section>
 
                 <section id="contact" class="box">
+                    <h1>Contact Me</h1>
+                    <form id="contact-form" class="box-insert">
+                        <label>Full name or Codename</label>
+                        <input type="text" name="name" placeholder="Name" required>
+                        <label>Message for Harry</label>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        <label>Let me Respond</label>
+                        <div class="splitter">
+                            <input type="email" name="email" placeholder="Email Address">
+                            <input type="tel" placeholder="Phone Number">
+                            <input type="submit">
+                        </div>
+                    </form>
+
                     <h1>Contact Details</h1>
                     <div class="holder-container">
                         <div class="contact-details">

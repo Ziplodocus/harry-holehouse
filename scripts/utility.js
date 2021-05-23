@@ -1,8 +1,9 @@
-//References to translate variables
-let previous = 1;
+
 
 
 //Navigate shows the content associated with nav button
+//Position of current page
+let previous = 1;
 function navigate(event) {
     let times = [0, '1500ms', '2000ms', '3000ms'];
     const targetPositions = {
