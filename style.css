@@ -79,6 +79,7 @@ ul {
     --dark-gray: hsl(0, 0%, 35%);
     --mid-gray: hsl(0, 0%, 50%);
     --light-gray: hsl(0, 0%, 60%);
+    --near-white: hsl(0, 0%, 90%);
     --true-white: hsl(0, 0%, 100%);
     --darken: hsla(0, 0%, 0%, 0.5);
     --lighten: hsla(0, 0%, 100%, 0.5);    
@@ -97,6 +98,7 @@ ul {
 
 body {
     --nav-hover: var(--true-black);
+    --text-color: var(--true-white);
     --accent: var(--near-black);
     --box-bg-color-1: var(--charcoal);
     --box-bg-color-2: var(--darker-gray);
@@ -106,7 +108,7 @@ body {
     --border-radius: 0.3rem;
     --slider-translate: var(--dyn-position);
     --nav-time: var(--dyn-timing);
-    background-color: var(--true-white);
+    background-color: var(--text-color);
 }
 
 ::-webkit-scrollbar {
@@ -322,18 +324,23 @@ form {
     }
     form input {
         margin: 0.5rem 1rem;
+        min-width: 20ch;
         padding: 4px;
-        border: 3px solid var(--box-bg-color-3); 
+        border: 4px solid var(--box-bg-color-3); 
         border-radius: 5px;
         color: black;
+        background-color: var(--near-white);
         text-shadow: none;
     }
     form textarea {
         margin: 0.5rem 1rem;
-        border: 2px solid var(--box-bg-color-3); 
+        min-width: 20ch;
+        max-width: calc(100% - 3rem);
+        border: 4px solid var(--box-bg-color-3); 
         border-radius: 5px;
-        padding: 3px;
+        padding: 4px;
         color: black;
+        background-color: var(--near-white);
         text-shadow: none;
         align-self: stretch;
     }
@@ -346,11 +353,17 @@ form {
         align-content: space-between;
         }
         form .splitter * {
-            margin: 1rem;
+            margin: 0.5rem 1rem;
             flex: 1 0 20ch;
         }
         form .splitter input[type="submit"] {
             flex: 1 1 100%;
+            transition: 0.4s ease;
+            cursor: pointer;
+        }
+            form .splitter input[type="submit"]:hover {
+                color: var(--text-color);
+                background-color: var(--accent);
 }
     
 

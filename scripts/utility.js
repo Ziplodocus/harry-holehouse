@@ -26,8 +26,29 @@ function navigate(event) {
     previous = parseInt(targetPosition[0]);
 }
 
+function toFormData(event) {
+    const formData = {};
+    const el = event.currentTarget;
+    let lim = el.length;
+    for (i=0; i<lim; i++) {
+        if(el[i].value) {
+            formData[el[i].name] = el[i].value;
+        }
+    };
+    return formData
+}
+
+function formHandle(event) {
+    event.preventDefault();
+    let inf = toFormData(event);
+    console.log(inf);
+}
+
 $(document).ready(() => {
     //Adds event listeners to all the nav-buttons
     const buttons = $('.nav-button');
     buttons.on("click", navigate);
+
+    $('#contact-form').submit(formHandle);
 })
+
