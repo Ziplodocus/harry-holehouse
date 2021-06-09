@@ -1,14 +1,21 @@
+
+/*Importing nunito font family*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap');
+
 /* Styling resets and new defaults*/
 * {
     margin: 0;
     padding: 0;
     color: var(--true-white);
-    line-height: 1.5rem;
+    transform-box: border-box;
+    text-decoration: none;
+}
+
+html {
     font-size: 20px;
     font-family: "Nunito", sans-serif;
     font-weight: 200;
-    text-decoration: none;
-    transform-box: border-box;
+    line-height: 1.5;
     letter-spacing: 0.04rem;
     text-shadow: 2px 2px var(--shadow);
 }
@@ -21,52 +28,6 @@ p {
 
 ul {
     list-style: square inside;
-}
-
-/*Importing fonts*/
-@font-face {
-    font-family: 'Nunito';
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXQ3I6Li01BKofIMN5MZ9vKUT8.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Nunito';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXX3I6Li01BKofIMNaDRs4.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofA-seUYevI.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOUYevI.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /*General stylings and variables*/
@@ -128,30 +89,6 @@ body {
     background-color: var(--accent);
 }
 
-h1 {
-    font-size: 1.8rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.35rem;
-}
-
-h4 {
-    font-size: 1.25rem;
-}
-
-h5 {
-    font-size: 1.15rem;
-}
-
-h6 {
-    font-size: 1.05rem;
-}
-
 h1,
 h2,
 h3,
@@ -159,14 +96,9 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    margin: 0.4em 0 0.3em;
-    line-height: 1.6em;
+    margin: 0.5rem 0 0.3rem 0;
+    line-height: 1.6rem;
     letter-spacing: 0.06em;
-}
-
-h1 {
-    letter-spacing: 0.08rem;
-    font-size: 1.5rem;
 }
 
 /*NAV BAR Stylings*/
@@ -189,8 +121,9 @@ nav {
         justify-content: center;
         cursor: pointer;
         transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1);
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: 200;
+        line-height: 1;
         letter-spacing: 0.08rem;
         text-align: center;
         text-decoration: none;
@@ -203,7 +136,7 @@ nav {
             background-color: var(--accent);
 }
 
-/*Sets styling for the main content sections*/
+/*Sets styling for the main content sections and structure*/
 
 .content-container {
     position: relative;
@@ -268,12 +201,34 @@ nav {
 
 /*Projects Styling*/
 
-.contents {
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: space-around;
+.project {
+    height: auto;
+    transition: transform 200ms, box-shadow 200ms, height 1000ms;
+    overflow: hidden;
+}
+    .project h2 {
+        height: 1.4rem;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 0.7rem;
+        padding: 0.7rem 0;
+        border-radius: var(--border-radius);
+        font-size: 1.4rem;
+        text-align: center;
+        transition: 600ms;
+        cursor: pointer;
+        user-select: none;
+    }
+        .project h2:hover {
+            background-color: var(--box-bg-color-3);
+        }
+.project.closed {
+    /* Used to overide inline default height, required for smooth transition*/
+    height: 2.8rem;
+    }
+    .project.closed:active {
+        transform: translate(0.2rem, 0.2rem);
+        box-shadow: none;
 }
 
 .figures-flex {

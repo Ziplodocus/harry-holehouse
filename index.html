@@ -74,16 +74,31 @@
 
         <section id="projects" class="box">
             <h1>Projects</h1>
-            <article id="website" class="project box-insert">
-                <h3>Portfolio Website</h3>
-                <p>This would be the website you are currently traversing.</p>
+            <article id="website" class="project closed box-insert">
+                <h2 class="proj-tog">Portfolio Website</h2>
+                <p>The website you are currently traversing.</p>
                 <h5>Carousel Style Navigation</h5>
                 <p>The content of the page is within a box wider than the size of the screen. The content within this 'sliding box' is spaced evenly and when one of the navigation links is clicked, the position of the 'sliding' box is moved to show the relevant 'page'.</p>
                 <br>
                 <p>The current position of the page is tracked and the distance needed to traverse to display the next page will affect the timing of the transition to that page. Traversing further will take longer.</p>
             </article>
-            <article class="project box-insert">
-                <h3>Instagram</h3>
+
+            <article id="ziplod" class="project closed box-insert">
+                <h2 class="proj-tog">Ziplod the Discord Bot</h2>
+            </article>
+
+            <article id="justice" class="project closed box-insert" hidden>
+                <h2 class="proj-tog">Justice - Dummy Site</h2>
+            </article>
+
+            <article id="cityStatus" class="project closed box-insert">
+                <h2 class="proj-tog">City Status</h2>
+                <h5>A dev task</h5>
+                <a href="">View this code on gitHub</a>
+            </article>
+
+            <article class="project closed box-insert">
+                <h2 class="proj-tog">Instagram</h2>
                 <div class="figures-flex">
                     <figure class="box-in-insert">
                         <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
@@ -104,12 +119,6 @@
                         Find<br>More<br>On<br>Instagram
                     </label>
                 </a>
-            </article>
-            <article id="ziplod" class="project box-insert">
-                <h3>Ziplod the Discord Bot</h3>
-            </article>
-            <article id="justice" class="project box-insert">
-                <h3>Justice - Dummy Site</h3>
             </article>
         </section>
 
@@ -152,6 +161,7 @@
         crossorigin="anonymous">
     </script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/projects.js"></script>
 </body>
 
 </html>
