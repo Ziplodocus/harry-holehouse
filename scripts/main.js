@@ -1,10 +1,12 @@
 
-
+//Position of current page
+let position = 1;
 
 //Navigate shows the content associated with nav button
-//Position of current page
-let previous = 1;
 function navigate(event) {
+    console.log('yes');
+    //defines the translate position required to display which content
+    //and the time the transition takes and assigns these to variables in the CSS
     let times = [0, '1500ms', '2000ms', '3000ms'];
     const targetPositions = {
         "home": ["1", "-6.175%"],
@@ -12,20 +14,17 @@ function navigate(event) {
         "projects": ["3", "-56.175%"],
         "contact": ["4", "-81.175%"]
     };
-    //retrievs the position associated with the section
     let targetSection = event.currentTarget.name.toString();
     let targetPosition = targetPositions[targetSection];
-    //Determines which transition timing variable to pick
-    let translateTime = times[Math.abs(previous - parseInt(targetPosition[0]))].toString();
-    //Changes the translation and timing for consistency
+    let translateTime = times[Math.abs(position - parseInt(targetPosition[0]))].toString();
     $(":root").get(0).style.setProperty("--dyn-timing", translateTime);
     $(":root").get(0).style.setProperty("--dyn-position", targetPosition[1]);
     //Tracks the previous position of the slider
-    //so the timing can be extended for further
-    //translation
-    previous = parseInt(targetPosition[0]);
+    //so the timing can be extended for translations of greater distance
+    position = parseInt(targetPosition[0]);
 }
 
+//Converts a form submit event into object containing the name value pairs of the inputs
 function toFormData(event) {
     const formData = {};
     const el = event.currentTarget;
@@ -38,6 +37,7 @@ function toFormData(event) {
     return formData
 }
 
+//Handles the form submit
 function formHandle(event) {
     event.preventDefault();
     let inf = toFormData(event);
@@ -45,8 +45,8 @@ function formHandle(event) {
 }
 
 $(document).ready(() => {
-    //Adds event listeners to all the nav-buttons
-    const buttons = $('.nav-button');
+    //Adds event listeners to all the nav links
+    const buttons = $('nav a');
     buttons.on("click", navigate);
 
     $('#contact-form').submit(formHandle);

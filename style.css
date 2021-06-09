@@ -170,7 +170,7 @@ h1 {
 }
 
 /*NAV BAR Stylings*/
-.section-nav {
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -178,8 +178,9 @@ h1 {
     height: 4.5rem;
     display: flex;
     justify-content: space-around;
-    z-index: 5;}
-    .section-nav a {
+    z-index: 5;
+    }
+    nav a {
         padding: 0 0.6rem;
         background-color: var(--accent);
         flex-grow: 1;
@@ -192,19 +193,24 @@ h1 {
         font-weight: 200;
         letter-spacing: 0.08rem;
         text-align: center;
-        text-decoration: none;}
-        .section-nav a:hover {
-            background-color: var(--nav-hover);}
-        .section-nav a:active {
-            background-color: var(--accent);}
+        text-decoration: none;
+        user-select: none;
+        }
+        nav a:hover {
+            background-color: var(--nav-hover);
+            }
+        nav a:active {
+            background-color: var(--accent);
+}
 
 /*Sets styling for the main content sections*/
 
 .content-container {
     position: relative;
-    top: 4rem;
+    top: 3.5rem;
     overflow-x: hidden;
     overflow-y: scroll;
+    min-width: 47ch;
     width: 100%;
     height: calc(100vh - 4rem);
     }
@@ -232,6 +238,9 @@ h1 {
                 border-radius: var(--border-radius);
                 box-shadow: 0.3rem 0.3rem 0.1rem 0.2rem var(--box-shadow);
                 }
+                .box-insert p {
+                    min-width: calc(45ch - 1.5rem)
+                }
                 .box-in-insert {
                     padding: 0.35rem;
                     border-radius: var(--border-radius);
@@ -241,16 +250,20 @@ h1 {
 
 /*Profile Styling*/
 
-#skills {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: center;
-    flex-wrap: wrap;
+.skill-div {
+    margin: 0.5rem;
+    padding: 1rem;
+    width: calc(100% - 1rem);
+    text-align: center;
+}
+    .skill-div ul {
+        width: 100%;
+        list-style: none;
     }
-    .skill-div{
-        padding: 0 0.5rem;
-        min-width: 100px;
+        .skill-div ul li {
+            width: 100%;
+            margin: 0.2rem 0;
+            background-color: var(--box-bg-color-3);
 }
 
 /*Projects Styling*/
@@ -271,14 +284,15 @@ h1 {
     align-content: space-between;
     }
     .figures-flex figure {
-        text-align: center;
-        margin: 1rem;
-        max-width: 300px;
+        margin: 2rem 0.5rem;
+        max-width: 400px;
+        flex: 1 1 300px;
         transition: all 600ms;
         z-index: 1;
+        text-align: center;
         }
         .figures-flex figure img {
-            max-width: 300px;
+            max-width: 100%;
             border-radius: var(--border-radius) var(--border-radius) 0 0;
         }
         .figures-flex figure figcaption {
@@ -318,7 +332,7 @@ h1 {
 
 /*Contact form styling*/
 form {
-    display: flex;
+    display: none; /*flex*/
     flex-direction: column;
     align-items: flex-start;
     }
@@ -399,7 +413,7 @@ form {
                 box-shadow: 0 0 0 0 var(--true-black);
 }
 
-@media only screen and (max-width: 740px) {
+@media screen and (max-width: 740px) {
     .socials {
         margin-top: 1rem;
     }

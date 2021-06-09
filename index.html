@@ -3,14 +3,15 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Harry Holehouse-Eyre</title>
     <link rel="icon" type="image/png" href="./resources/fav-icon.png">
+    <link rel="stylesheet" type="text/css" href="./style.css" >    
 </head>
 
 <body>
 
-    <nav class="section-nav">
+    <nav>
         <a name="home" class="nav-button">Harry Holehouse-Eyre</a>
         <a name="profile" class="nav-button">Profile</a>
         <a name="projects" class="nav-button">Projects</a>
@@ -18,146 +19,139 @@
     </nav>
 
     <main>
-        <div class="content-container">
-            <div class="slider">
-                <section id="home" class="box">
-                    <h1>Welcome!</h1>
-                    <h6>Think of me as a portfolio and hub for all things Harry!</h3>
-                    <h3>Planned Site Features</h3>
-                    <ul>
-                        <li>A form on the Contact Details section to send Harry a message</li>
-                        <li>More content for the Projects section</li>
-                        <li>Add accessibility settings e.g adjustable Font size, colors etc.</li>
-                    </ul>
-                </section>
+    <div class="content-container">
+    <div class="slider">
+        <section id="home" class="box">
+            <h1>Welcome!</h1>
+            <h6>Think of me as a portfolio and hub for all things Harry!</h3>
+            <h3>Planned Site Features</h3>
+            <ul>
+                <li>A form on the Contact Details section to send Harry a message</li>
+                <li>More content for the Projects section</li>
+                <li>Add accessibility settings e.g adjustable Font size, colors etc.</li>
+            </ul>
+        </section>
 
-                <section id="profile" class="box">
-                    <h1>Profile</h1>
-                    <p>
-                        A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
-                    </p>
-                    <h3>Skills</h3>
-                    <div id="skills">
-                        <div class="skill-div">
-                            <h5>Languages</h5>
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Bash</li>
-                            </ul>
-                        </div>
-                        <div class="skill-div">
-                            <h5>Software</h5>
-                            <ul>
-                                <li>GIMP</li>
-                                <li>Git</li>
-                                <li>Microsoft Office</li>
-                                <li>Visual Studio Code</li>
-                                <li>GitHub</li>
-                                <li>Paint.Net</li>
-                            </ul>
-                        </div>
-                        <div class="skill-div">
-                            <h5>Soft Skills</h5>
-                            <ul>
-                                <li>Self-Motivated</li>
-                                <li>Attention to Detail</li>
-                                <li>Logical</li>
-                                <li>Problem Solver</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>What am I doing next?</h3>
-                    <p>
-                        Practicing CSS grid by building a new website, implementing some forms and javaScript to this site and continuing my learning process with frameworks such as Bootstrap and Vue.js.
-                    </p>
-                </section>
-
-                <section id="projects" class="box">
-                    <h1>Projects</h1>
-                    <nav class="contents">
-                        <a href="#website"><h5>Portfolio Website</h5></a>
-                        <a href="#art"><h5>Instagram</h5></a>
-                        <a href="#ziplod"><h5>Ziplod the Discord Bot</h5></a>
-                        <a href="#justice"><h5>Justice - Dummy Site</h5></a>
-                    </nav>
-                    <article id="website" class="project box-insert">
-                        <h3>Portfolio Website</h3>
-                    </article>
-                    <article class="project box-insert">
-                        <h3>Instagram</h3>
-                        <div class="figures-flex">
-                            <figure class="box-in-insert">
-                                <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
-                                <figcaption>Whisky Santa | Winner of internal Christmas Postcard competition</figcaption>
-                            </figure>
-                            <figure class="box-in-insert">
-                                <img src="./resources/doughnut.png" alt="Blue blob boy lifts mighty doughnut high in the sky">
-                                <figcaption>Doughnut Lad | This lad sure likes his doughnut, reminds me of me.</figcaption>
-                            </figure>
-                            <figure class="box-in-insert">
-                                <img src="./resources/astroboy.png" alt="astronaut floats like a bee stings like a... wait...">
-                                <figcaption>Astroboy Enjoys Many Dimensions | I'd feel the same way if I were in space</figcaption>
-                            </figure>
-                        </div>
-                        <a id="insta-link" class="box-in-insert" href="https://www.instagram.com/ziplodocus/" target="_blank">
-                            <img src="./resources/insta-logo.png">
-                            <label>
-                                Find<br>More<br>On<br>Instagram
-                            </label>
-                        </a>
-                    </article>
-                    <article id="ziplod" class="project box-insert">
-                        <h3>Ziplod the Discord Bot</h3>
-                    </article>
-                    <article id="justice" class="project box-insert">
-                        <h3>Justice - Dummy Site</h3>
-                    </article>
-                </section>
-
-                <section id="contact" class="box">
-                    <h1>Contact Me</h1>
-                    <form id="contact-form" class="box-insert" action="">
-                        <label>Your Name (or alias)</label>
-                        <input type="text" name="name" placeholder="Name" required>
-                        <label>Message for Harry</label>
-                        <textarea id="message" name="message" placeholder="Message" required></textarea>
-                        <label>Your Details</label>
-                        <div class="splitter">
-                            <input type="email" name="email" placeholder="Email Address">
-                            <input type="tel" name="phoneNumber" placeholder="Phone Number">
-                            <input type="submit">
-                        </div>
-                    </form>
-
-                    <h1>Contact Details</h1>
-                    <div class="holder-container">
-                        <div class="contact-details">
-                            Email Address: haroldholehouse@gmail.com
-                            <br>
-                            Phone Number: 07983081640
-                        </div>
-                        <div class="socials">
-                            <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
-                            <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
-                            <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
-                        </div>
-                    </div>
-                </section>
+        <section id="profile" class="box">
+            <h1>Profile</h1>
+            <p>
+                A self taught coder with a background in mathematics and production, keen to test and improve my skills in a professional setting with a focus on front-end web development. 
+            </p>
+            <div id="skills">
+                <h3>Skills</h3>
+                
+                <ul class="box-insert">
+                    <h5>Languages</h5>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bash</li>
+                </ul>
+                
+                <ul class="box-insert">
+                    <h5>Software</h5>
+                    <li>GIMP</li>
+                    <li>Git</li>
+                    <li>Microsoft Office</li>
+                    <li>Visual Studio Code</li>
+                    <li>GitHub</li>
+                    <li>Paint.Net</li>
+                </ul>
+                
+                <ul class="box-insert">
+                    <h5>Soft Skills</h5>
+                    <li>Self-Motivated</li>
+                    <li>Attention to Detail</li>
+                    <li>Logical</li>
+                    <li>Problem Solver</li>
+                </ul>
             </div>
-        </div>
-    </main>
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-    <script src="./scripts/utility.js"></script>
+            <h3>What am I doing next?</h3>
+            <p>
+                Practicing CSS grid by building a new website, implementing some forms and javaScript to this site and continuing my learning process with frameworks such as Bootstrap and Vue.js.
+            </p>
+        </section>
 
+        <section id="projects" class="box">
+            <h1>Projects</h1>
+            <article id="website" class="project box-insert">
+                <h3>Portfolio Website</h3>
+                <p>This would be the website you are currently traversing.</p>
+                <h5>Carousel Style Navigation</h5>
+                <p>The content of the page is within a box wider than the size of the screen. The content within this 'sliding box' is spaced evenly and when one of the navigation links is clicked, the position of the 'sliding' box is moved to show the relevant 'page'.</p>
+                <br>
+                <p>The current position of the page is tracked and the distance needed to traverse to display the next page will affect the timing of the transition to that page. Traversing further will take longer.</p>
+            </article>
+            <article class="project box-insert">
+                <h3>Instagram</h3>
+                <div class="figures-flex">
+                    <figure class="box-in-insert">
+                        <img src="./resources/Whisky santa.png" alt="Santa in Edinburgh getting pissed">
+                        <figcaption>Whisky Santa | Winner of internal Christmas Postcard competition</figcaption>
+                    </figure>
+                    <figure class="box-in-insert">
+                        <img src="./resources/doughnut.png" alt="Blue blob boy lifts mighty doughnut high in the sky">
+                        <figcaption>Doughnut Lad | This lad sure likes his doughnut, reminds me of me.</figcaption>
+                    </figure>
+                    <figure class="box-in-insert">
+                        <img src="./resources/astroboy.png" alt="astronaut floats like a bee stings like a... wait...">
+                        <figcaption>Astroboy Enjoys Many Dimensions | I'd feel the same way if I were in space</figcaption>
+                    </figure>
+                </div>
+                <a id="insta-link" class="box-in-insert" href="https://www.instagram.com/ziplodocus/" target="_blank">
+                    <img src="./resources/insta-logo.png">
+                    <label>
+                        Find<br>More<br>On<br>Instagram
+                    </label>
+                </a>
+            </article>
+            <article id="ziplod" class="project box-insert">
+                <h3>Ziplod the Discord Bot</h3>
+            </article>
+            <article id="justice" class="project box-insert">
+                <h3>Justice - Dummy Site</h3>
+            </article>
+        </section>
+
+        <section id="contact" class="box">
+            <h1>Contact Me</h1>
+            <form id="contact-form" class="box-insert" action="">
+                <label>Your Name (or alias)</label>
+                <input type="text" name="name" placeholder="Name" required>
+                <label>Message for Harry</label>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <label>Your Details</label>
+                <div class="splitter">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <input type="tel" name="phoneNumber" placeholder="Phone Number">
+                    <input type="submit">
+                </div>
+            </form>
+
+            <h1>Contact Details</h1>
+            <div class="holder-container">
+                <div class="contact-details">
+                    Email Address: haroldholehouse@gmail.com
+                    <br>
+                    Phone Number: 07983081640
+                </div>
+                <div class="socials">
+                    <a href="https://www.facebook.com/HarryHolehouseEyre/" target="_blank"><img src="./resources/fb-logo.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/ziplodocus/" target="_blank"><img src="./resources/insta-logo.png" alt="instagram"></a>
+                    <a href="https://github.com/Ziplodocus" target="_blank"><img src="./resources/GitHub-logo.png" alt="github"></a>
+                    <a href="https://www.linkedin.com/in/harryholehouse" target="_blank"><img src="./resources/linkedin-logo.png" alt="linkedin"></a>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    </main>
+    <script 
+        src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous">
+    </script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
-
-<!--Required empty script tag to fix chrome bug playing transitions on page load-->
-<script> </script>
