@@ -222,6 +222,16 @@ nav {
         .project h2:hover {
             background-color: var(--box-bg-color-3);
         }
+    .project a {
+        display: block;
+        font-weight: bold;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        transition: background-color 600ms;
+    }
+        .project a:hover {
+            background-color: var(--box-bg-color-3);
+        }
 .project.closed {
     /* Used to overide inline default height, required for smooth transition*/
     height: 2.8rem;
@@ -234,7 +244,7 @@ nav {
 .figures-flex {
     display: flex;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: flex-end;
     flex-wrap: wrap;
     align-content: space-between;
     }
