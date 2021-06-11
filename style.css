@@ -17,13 +17,13 @@ html {
     font-weight: 200;
     line-height: 1.5;
     letter-spacing: 0.04rem;
-    text-shadow: 2px 2px var(--shadow);
+    text-shadow: 0.1rem 0.1rem var(--shadow);
 }
 
 p {
     min-width: 45ch;
     max-width: 85ch;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 ul {
@@ -73,7 +73,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -184,20 +184,31 @@ nav {
 /*Profile Styling*/
 
 .skill-div {
-    margin: 0.5rem;
-    padding: 1rem;
-    width: calc(100% - 1rem);
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
     .skill-div ul {
-        width: 100%;
+        margin: 1rem 0.5rem;
+        flex: 1 1 18rem;
         list-style: none;
+        transition: transform 800ms, box-shadow 800ms;
     }
+        .skill-div ul:hover {
+            transform: translate(-0.25rem, -0.25rem);
+            box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem var(--box-shadow);
+        }
         .skill-div ul li {
-            width: 100%;
             margin: 0.2rem 0;
+            padding: 0.3rem;
             background-color: var(--box-bg-color-3);
-}
+            transition: 200ms;
+            }
+            .skill-div ul li:hover {
+                transform: scale(1.03);
+            }
 
 /*Projects Styling*/
 
@@ -205,7 +216,7 @@ nav {
     height: auto;
     transition: transform 200ms, box-shadow 200ms, height 1000ms;
     overflow: hidden;
-}
+    }
     .project h2 {
         height: 1.4rem;
         width: 100%;
@@ -218,20 +229,22 @@ nav {
         transition: 600ms;
         cursor: pointer;
         user-select: none;
-    }
+        }
         .project h2:hover {
             background-color: var(--box-bg-color-3);
-        }
+    }
     .project a {
         display: block;
-        font-weight: bold;
-        padding: 1rem;
         border-radius: var(--border-radius);
-        transition: background-color 600ms;
-    }
+        padding: 1rem;
+        transition: 400ms;
+        font-weight: bold;
+        text-align: center;
+        }
         .project a:hover {
             background-color: var(--box-bg-color-3);
-        }
+}
+
 .project.closed {
     /* Used to overide inline default height, required for smooth transition*/
     height: 2.8rem;
@@ -273,25 +286,32 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
-    transition: all 500ms;
+    padding: 0.5rem;
+    transition: all 600ms;
     }
     #insta-link img {
-        max-height: 4.5rem;
+        margin-right: 0.3rem;
+        height: 4.5rem;
+        border: 0.2rem solid var(--box-bg-color-2);
+        border-radius: 25%;
+        transition: 800ms, transform 2000ms cubic-bezier(0.3, 1.1, 0.5, 1);
+    }
+        #insta-link:hover img {
+            transform: rotate(720deg);
+            border-radius: 50%;
+            border-color: var(--nav-hover);
     }
     #insta-link label {
-        font-weight: 700;
-        line-height: 1.1rem;
-        border-left: 2px solid var(--accent);
-        padding-left: 0.3rem;
-        margin-left: 0.3rem;
+        display: inline-block;
+        height: 4.9rem;
+        border-left: 0.2rem solid var(--accent);
+        padding-left: 0.5rem;
+        text-align: left;
+        line-height: 1.2;
         cursor: pointer;
     }
-    #insta-link:hover {
-        filter: saturate(1.5) brightness(1.2);
-    }
     #insta-link:active {
-        box-shadow:  none;
+        box-shadow: none;
         transform: translate(0.2rem, 0.2rem);
 }
 
@@ -304,9 +324,9 @@ form {
     form input {
         margin: 0.5rem 1rem;
         min-width: 20ch;
-        padding: 4px;
-        border: 4px solid var(--box-bg-color-3); 
-        border-radius: 5px;
+        padding: 0.2rem;
+        border: 0.2rem solid var(--box-bg-color-3); 
+        border-radius: 0.25rem;
         color: black;
         background-color: var(--near-white);
         text-shadow: none;
@@ -315,9 +335,9 @@ form {
         margin: 0.5rem 1rem;
         min-width: 20ch;
         max-width: calc(100% - 3rem);
-        border: 4px solid var(--box-bg-color-3); 
-        border-radius: 5px;
-        padding: 4px;
+        border: 0.2rem solid var(--box-bg-color-3); 
+        border-radius: var(--border-radius);
+        padding: 0.2rem;
         color: black;
         background-color: var(--near-white);
         text-shadow: none;
@@ -359,7 +379,7 @@ form {
         flex: 1 0;
         min-width: 8.2rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         align-content: center;
         flex-wrap: wrap; }
