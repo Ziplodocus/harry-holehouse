@@ -366,16 +366,14 @@ form {
         .socials a img {
             max-width: 3rem;
             margin: 0.125rem 0.25rem;
-            box-shadow: 0 0 0.3rem 0.2rem var(--box-shadow);
-            border-radius: 50%;
-            border: 0.3rem solid var(--accent);
-            transition: all 1s ease-in-out,
-                        transform 3s cubic-bezier(0, 2, 1, 1);}
+            box-shadow: 0 0 0.3rem 0.3rem var(--box-shadow);
+            border-radius: 51%;
+            border: 0.4rem solid var(--accent);
+            transition: all 1s, transform 2s cubic-bezier(0, 2, 0.5, 1);}
             .socials a img:hover {
-                filter: saturate(2);
                 transform: rotate(1080deg) scale(0.95);
                 border-color: var(--nav-hover);
-                box-shadow: 0 0 0 0 var(--true-black);
+                box-shadow: none;
 }
 
 @media screen and (max-width: 740px) {
