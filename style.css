@@ -30,8 +30,20 @@ ul {
     list-style: square inside;
 }
 
-/*General stylings and variables*/
+/* Setting default heading style*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 0.5rem 0 0.3rem 0;
+    line-height: 1.6rem;
+    letter-spacing: 0.06em;
+}
 
+/*General stylings and variables*/
 :root {
     --true-black:  hsl(0, 0%, 0%);
     --near-black: hsl(0, 0%, 10%);
@@ -41,11 +53,9 @@ ul {
     --mid-gray: hsl(0, 0%, 50%);
     --light-gray: hsl(0, 0%, 60%);
     --near-white: hsl(0, 0%, 90%);
-    --true-white: hsl(0, 0%, 100%);
-    --darken: hsla(0, 0%, 0%, 0.5);
-    --lighten: hsla(0, 0%, 100%, 0.5);    
+    --true-white: hsl(0, 0%, 100%);  
     --shadow: hsla(0, 0%, 0%, 0.2);
-    --shadow-2: hsla(0, 0%, 0%, 0.05);
+    --shadow-light: hsla(0, 0%, 0%, 0.05);
     --dyn-position: -6.175%;
     --translate-1: -6.175%;
     --translate-2: -31.175%;
@@ -65,13 +75,14 @@ body {
     --box-bg-color-2: var(--darker-gray);
     --box-bg-color-3: var(--dark-gray);
     --box-shadow: var(--shadow);
-    --box-shadow-up: var(--shadow-2);
+    --box-shadow-up: var(--shadow-light);
     --border-radius: 0.3rem;
     --slider-translate: var(--dyn-position);
     --nav-time: var(--dyn-timing);
     background-color: var(--text-color);
 }
 
+/* Scrollbar stylings*/
 ::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -89,17 +100,7 @@ body {
     background-color: var(--accent);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
-    margin: 0.5rem 0 0.3rem 0;
-    line-height: 1.6rem;
-    letter-spacing: 0.06em;
-}
+
 
 /*NAV BAR Stylings*/
 nav {
@@ -136,8 +137,8 @@ nav {
             background-color: var(--accent);
 }
 
-/*Sets styling for the main content sections and structure*/
 
+/*Sets styling for the main content sections and structures the page*/
 .content-container {
     position: relative;
     top: 3.5rem;
@@ -181,8 +182,9 @@ nav {
                     box-shadow: 0.2rem 0.2rem 0.1rem 0.2rem var(--box-shadow);
 }
 
-/*Profile Styling*/
 
+
+/*Profile Styling*/
 .skill-div {
     text-align: center;
     display: flex;
@@ -208,10 +210,11 @@ nav {
             }
             .skill-div ul li:hover {
                 transform: scale(1.03);
-            }
+}
+
+
 
 /*Projects Styling*/
-
 .project {
     height: auto;
     transition: transform 200ms, box-shadow 200ms, height 1000ms;
@@ -246,7 +249,6 @@ nav {
 }
 
 .project.closed {
-    /* Used to overide inline default height, required for smooth transition*/
     height: 2.8rem;
     }
     .project.closed:active {
@@ -254,6 +256,20 @@ nav {
         box-shadow: none;
 }
 
+/* Ziplod project styling*/
+.ziplod-img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    transition: 600ms;
+    }
+    .ziplod-img:hover {
+        transform: scale(1.1);
+        box-shadow: 1rem 1rem 0.3rem 0.3rem var(--box-shadow-up);
+        z-index: 2;
+}
+
+/* Instagram project stylings*/
 .figures-flex {
     display: flex;
     justify-content: space-around;
@@ -315,7 +331,10 @@ nav {
         transform: translate(0.2rem, 0.2rem);
 }
 
-/*Contact form styling*/
+
+
+/*Contact Details styling*/
+/* Contact Form */
 form {
     display: none; /*flex*/
     flex-direction: column;
