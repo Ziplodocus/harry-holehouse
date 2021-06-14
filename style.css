@@ -18,7 +18,6 @@ html {
     line-height: 1.5;
     letter-spacing: 0.04rem;
     text-shadow: 0.1rem 0.1rem var(--shadow);
-    height: 100%;
 }
 
 p {
@@ -81,12 +80,9 @@ body {
     --slider-translate: var(--dyn-position);
     --nav-time: var(--dyn-timing);
     background-color: var(--text-color);
-    height: 100%;
 }
 
-main {
-    height: 100%;
-}
+
 
 /* Scrollbar stylings*/
 ::-webkit-scrollbar {
@@ -116,7 +112,7 @@ nav {
     width: 100%;
     height: 4.5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     z-index: 5;
     }
     nav a {
@@ -152,7 +148,7 @@ nav {
     overflow-y: scroll;
     min-width: 47ch;
     width: 100%;
-    height: calc(100% - 4rem);
+    height: calc(100vh - 4rem);
     }
     .slider {
         display: flex;
