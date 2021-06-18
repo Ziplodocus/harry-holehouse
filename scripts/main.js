@@ -37,8 +37,7 @@ function navigate(event) {
 function toFormData(event) {
     const formData = {};
     const el = event.currentTarget;
-    let lim = el.length;
-    for (i=0; i<lim; i++) {
+    for (i = 0; i < el.length; i++) {
         if(el[i].value) {
             formData[el[i].name] = el[i].value;
         }
@@ -53,11 +52,17 @@ function formHandle(event) {
     console.log(inf);
 }
 
-$(document).ready(() => {
-    //Adds event listeners to all the nav links
-    const buttons = $('nav a');
-    buttons.on("click", navigate);
+//Assigning event handlers
+const buttons = document.querySelectorAll('.nav-button');
+for (button of buttons) {
+    button.addEventListener('click', navigate);
+}
 
-    $('#contact-form').submit(formHandle);
-})
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', formHandle);
 
+const projectOpeners = document.querySelectorAll('.proj-tog');
+for (projectButton of projectOpeners) {
+    let project = projectButton.parentElement;
+    projectButton.addEventListener('click', autoToggle(project, '2.8rem',1000))
+}
