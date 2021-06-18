@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Holehouse-Eyre</title>
     <link rel="icon" type="image/png" href="./resources/fav-icon.png">
     <link rel="stylesheet" type="text/css" href="./style.css" >    
@@ -12,10 +12,11 @@
 <body>
 
     <nav>
-        <a name="home" class="nav-button">Harry Holehouse-Eyre</a>
+        <a name="home" class="nav-button">Home</a>
         <a name="profile" class="nav-button">Profile</a>
         <a name="projects" class="nav-button">Projects</a>
         <a name="contact" class="nav-button">Contact Details</a>
+        <a class="nav-expander"><img src="resources/navArrow.svg" alt="Nav arrow"></a>
     </nav>
 
     <main>
@@ -80,7 +81,7 @@
 
         <section id="projects" class="box">
             <h1>Projects</h1>
-            <article id="website" class="project closed box-insert">
+            <article id="website" class="project box-insert">
                 <h2 class="proj-tog">Portfolio Website</h2>
                 <p>The website you are currently traversing.</p>
                 <h4>Carousel Style Page Navigation</h4>
@@ -89,23 +90,23 @@
                 <h4>Projects Article Expansion</h4>
                 <p>The projects begin with styling to show only the title of the project. When they are clicked they expand to the height required to display the content.</p>
                 <p>The challenge here is that CSS transitions do not support the 'auto' value of height. To solve this, JavaScript is used to set the inline height of the box to the 'scrollHeight' (A property that determines how far can be scrolled, effectively the height of the content) allowing a smooth transition. After this transition is complete the height is then set to auto to maintain responsiveness.</p>
-                <p>Similarly, to return to it's initial height, the inline height must again be set to the scrollheight before being set almost immediatly to null so that the stylesheet style can be transitioned to smoothly once again.</p>
+                <p>Similarly, to return to it's initial height, the height must again be set to the scrollheight before being set almost immediatly to the initial value so that the stylesheet style can be transitioned smoothly once again.</p>
                 <a href="https://github.com/Ziplodocus/harry-holehouse" target="_blank">View Code On GitHub</a>
             </article>
 
-            <article id="ziplod" class="project closed box-insert">
+            <article id="ziplod" class="project box-insert">
                 <h2 class="proj-tog">Ziplod the Discord Bot</h2>
                 <img class="ziplod-img box-in-insert" src="resources/ziplod-s.png" alt="Icon for ziplod bot">
                 <p>A discord bot that plays hard coded intro music and plays audio files into your voice channel on command</p>
                 <a href="https://github.com/Ziplodocus/Ziplod" target="_blank">View Code On GitHub</a>
             </article>
 
-            <article id="justice" class="project closed box-insert" hidden>
+            <article id="justice" class="project box-insert" hidden>
                 <h2 class="proj-tog">Justice - Dummy Site</h2>
                 <a href="" target="_blank">View code on GitHub</a>
             </article>
 
-            <article id="cityStatus" class="project closed box-insert">
+            <article id="cityStatus" class="project box-insert">
                 <h2 class="proj-tog">City Status</h2>
                 <p>Displays the live time of day. The background is chosen by the weather, and is influenced by the time of day. Default city is Norwich, UK.</p>
                 <p>Actively updating page with javaScript and implementation of a Weather API</p>
@@ -113,7 +114,7 @@
                 <a href="https://github.com/Ziplodocus/CityStatus" target="_blank">View Code On GitHub</a>
             </article>
 
-            <article class="project closed box-insert">
+            <article class="project box-insert">
                 <h2 class="proj-tog">Instagram</h2>
                 <p>I occasionally upload drawings I've done. I've an intention to do this more regularly once I have found my place in the world of development</p>
                 <div class="figures-flex">
@@ -140,7 +141,7 @@
         </section>
 
         <section id="contact" class="box">
-            <h1>Contact Me</h1>
+            <h1 hidden>Contact Me</h1>
             <form id="contact-form" class="box-insert" action="">
                 <label>Your Name (or alias)</label>
                 <input type="text" name="name" placeholder="Name" required>
@@ -172,13 +173,9 @@
     </div>
     </div>
     </main>
-    <script 
-        src="https://code.jquery.com/jquery-3.6.0.min.js" 
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-        crossorigin="anonymous">
-    </script>
+    <script src="./scripts/autoToggle.js"></script>
     <script src="./scripts/main.js"></script>
-    <script src="./scripts/projects.js"></script>
+    <script src="./scripts/responsive.js"></script>
 </body>
 
 </html>

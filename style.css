@@ -21,7 +21,6 @@ html {
 }
 
 p {
-    min-width: 45ch;
     max-width: 85ch;
     margin: 1rem auto;
 }
@@ -79,6 +78,7 @@ body {
     --border-radius: 0.3rem;
     --slider-translate: var(--dyn-position);
     --nav-time: var(--dyn-timing);
+    --navbar-height: 4.5rem;
     background-color: var(--text-color);
 }
 
@@ -106,24 +106,28 @@ body {
 
 /*NAV BAR Stylings*/
 nav {
+    display: flex;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 4.5rem;
-    display: flex;
-    justify-content: space-evenly;
     z-index: 5;
+    width: 100%;
+    height: var(--navbar-height);
+    background-color: var(--accent);
+    transition: height 500ms, top 500ms;
+    }
+    .nav-expander {
+        display: none;
     }
     nav a {
+        flex-grow: 1;
+        flex-shrink: 1;
         padding: 0 0.6rem;
         background-color: var(--accent);
-        flex-grow: 1;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1);
+        transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1), transform 200ms;
         font-size: 1.5rem;
         font-weight: 200;
         line-height: 1;
@@ -140,15 +144,16 @@ nav {
 }
 
 
+
 /*Sets styling for the main content sections and structures the page*/
 .content-container {
     position: relative;
-    top: 4rem;
+    top: calc(var(--navbar-height) - 0.5rem);
     overflow-x: hidden;
     overflow-y: scroll;
-    min-width: 47ch;
     width: 100%;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - var(--navbar-height) - 0.5rem);
+    transition: top 300ms;
     }
     .slider {
         display: flex;
@@ -160,7 +165,7 @@ nav {
         }
         .box {
             flex: 0 0 10%;
-            min-width: 45ch;
+            
             max-width: 100ch;
             padding: 2rem;
             background-color: var(--box-bg-color-1);
@@ -173,9 +178,6 @@ nav {
                 max-width: calc(100% - 2rem);
                 border-radius: var(--border-radius);
                 box-shadow: 0.3rem 0.3rem 0.1rem 0.2rem var(--box-shadow);
-                }
-                .box-insert p {
-                    min-width: calc(45ch - 1.5rem)
                 }
                 .box-in-insert {
                     padding: 0.35rem;
@@ -231,12 +233,15 @@ nav {
         border-radius: var(--border-radius);
         font-size: 1.4rem;
         text-align: center;
-        transition: 600ms;
+        transition: 400ms;
         cursor: pointer;
         user-select: none;
         }
         .project h2:hover {
             background-color: var(--box-bg-color-3);
+        }
+        .project h2:active {
+            transform: translate(0.2rem, 0.2rem);
     }
     .project a {
         display: block;
@@ -250,19 +255,12 @@ nav {
             background-color: var(--box-bg-color-3);
 }
 
-.project.closed {
-    height: 2.8rem;
-    }
-    .project.closed:active {
-        transform: translate(0.2rem, 0.2rem);
-        box-shadow: none;
-}
-
 /* Ziplod project styling*/
 .ziplod-img {
     display: block;
     margin: 0 auto;
     width: 50%;
+    max-width: 300px;
     transition: 600ms;
     }
     .ziplod-img:hover {
@@ -347,7 +345,6 @@ form {
     }
     form input {
         margin: 0.5rem 1rem;
-        min-width: 20ch;
         padding: 0.2rem;
         border: 0.2rem solid var(--box-bg-color-3); 
         border-radius: 0.25rem;
@@ -357,7 +354,6 @@ form {
     }
     form textarea {
         margin: 0.5rem 1rem;
-        min-width: 20ch;
         max-width: calc(100% - 3rem);
         border: 0.2rem solid var(--box-bg-color-3); 
         border-radius: var(--border-radius);
@@ -396,10 +392,8 @@ form {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;}
-    .contact-details {
-        min-width: min-content;
-    }
     .socials {
+        margin: 1rem 0;
         flex: 1 0;
         min-width: 8.2rem;
         display: flex;
@@ -410,18 +404,36 @@ form {
         .socials a img {
             max-width: 3rem;
             margin: 0.125rem 0.25rem;
-            box-shadow: 0 0 0.3rem 0.3rem var(--box-shadow);
-            border-radius: 51%;
+            border-radius: 50%;
             border: 0.4rem solid var(--accent);
-            transition: all 1s, transform 2s cubic-bezier(0, 2, 0.5, 1);}
+            transition: all 2s, transform 2s cubic-bezier(0, 2, 0.5, 1);}
             .socials a img:hover {
                 transform: rotate(1080deg) scale(0.95);
-                border-color: var(--nav-hover);
-                box-shadow: none;
+                border-color:var(--nav-hover);
 }
 
-@media screen and (max-width: 740px) {
-    .socials {
-        margin-top: 1rem;
+@media only screen and (max-width: 500px) {
+    nav {
+        height: calc(5 * var(--navbar-height));
+        flex-direction: column;
+        top: calc(-4 * var(--navbar-height));
+        overflow: hidden;
     }
+        nav a {
+            font-size: 1.2rem;
+            min-height: var(--navbar-height);
+    }
+
+    nav.open {
+        top: 0;
+    }
+
+    .nav-expander {
+        display: flex;
+    }
+        .nav-expander img {
+            height: 80%;
+            transform: rotate(0);
+    }
+
 }
