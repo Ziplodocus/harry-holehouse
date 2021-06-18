@@ -152,7 +152,7 @@ nav {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
-    height: calc(100vh - var(--navbar-height) - 0.5rem);
+    height: calc(100vh - var(--navbar-height) + 0.5rem);
     transition: top 300ms;
     }
     .slider {
@@ -426,14 +426,20 @@ form {
 
     nav.open {
         top: 0;
-    }
+        }
+        nav.open .nav-expander img {
+            transform: rotate(540deg);
+        }
 
     .nav-expander {
         display: flex;
     }
         .nav-expander img {
-            height: 80%;
+            height: 50%;
             transform: rotate(0);
+            transition: transform 1s;
     }
+    
+
 
 }
