@@ -28,7 +28,7 @@ function autoToggle(elementToToggle, collapsedHeight, transitionTime) {
     if(isZero) {elementToToggle.style.display = 'none'};
     
     const handler = function(event) {
-        
+        console.log(event.type);
         const clickedElement = event.currentTarget;
         const eventType = event.type;
         const isClosed = elementToToggle.style.height === collapsedHeight;
@@ -39,7 +39,6 @@ function autoToggle(elementToToggle, collapsedHeight, transitionTime) {
         let isNotDisplayed = elementToToggle.style.display === 'none';
         if(isNotDisplayed) {
             elementToToggle.style.display = null;
-            isNotDisplayed = false;
         }
 
         /*Functions that transition to the auto height, and from the auto height
@@ -55,7 +54,7 @@ function autoToggle(elementToToggle, collapsedHeight, transitionTime) {
             elementToToggle.style.height = elementToToggle.scrollHeight - paddingBuffer + 'px';
             setTimeout(() => {
                 elementToToggle.style.height = collapsedHeight;
-            }, 1)
+            }, 10)
             
             if (isZero) {
                 setTimeout(() => {elementToToggle.style.display = 'none'}, transitionTime - 50)
@@ -65,7 +64,7 @@ function autoToggle(elementToToggle, collapsedHeight, transitionTime) {
         isClosed ? open() : close();
 
         //Reapplying the event listener
-        setTimeout(() => {clickedElement.addEventListener(eventType, handler)}, transitionTime);
+        setTimeout(() => {clickedElement.addEventListener(eventType, handler)}, transitionTime + 50);
     }
     return handler
 }

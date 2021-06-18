@@ -64,5 +64,5 @@ contactForm.addEventListener('submit', formHandle);
 const projectOpeners = document.querySelectorAll('.proj-tog');
 for (projectButton of projectOpeners) {
     let project = projectButton.parentElement;
-    projectButton.addEventListener('click', autoToggle(project, '2.8rem',1000))
+    projectButton.addEventListener('click', autoToggle(project, '2.8rem', 1000))
 }
