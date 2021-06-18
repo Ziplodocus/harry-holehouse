@@ -225,6 +225,9 @@ nav {
     overflow: hidden;
     }
     .project h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 1.4rem;
         width: 100%;
         margin: 0;
@@ -232,6 +235,7 @@ nav {
         padding: 0.7rem 0;
         border-radius: var(--border-radius);
         font-size: 1.4rem;
+        line-height: 1;
         text-align: center;
         transition: 400ms;
         cursor: pointer;

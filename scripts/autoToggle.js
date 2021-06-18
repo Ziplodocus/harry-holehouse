@@ -28,7 +28,7 @@ function autoToggle(elementToToggle, collapsedHeight, transitionTime) {
     if(isZero) {elementToToggle.style.display = 'none'};
     
     const handler = function(event) {
-        console.log(event.type);
+        
         const clickedElement = event.currentTarget;
         const eventType = event.type;
         const isClosed = elementToToggle.style.height === collapsedHeight;
