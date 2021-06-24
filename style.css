@@ -29,6 +29,11 @@ ul {
     list-style: square inside;
 }
 
+
+del {
+    text-decoration: line-through;
+}
+
 /* Setting default heading style*/
 h1,
 h2,
