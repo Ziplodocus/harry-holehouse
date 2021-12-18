@@ -1,8 +1,10 @@
-const navExpander = document.querySelector('.nav-expander');
-const navBar = document.querySelector('nav');
+const navExpander = document.querySelector( '.nav-expander' );
+const navBar = document.querySelector( 'nav' );
 
 function toggleNav() {
-    navBar.classList.toggle('open')
+    navBar.classList.toggle( 'open' )
 }
 
-navExpander.addEventListener('click', toggleNav);
+navExpander.addEventListener( 'click', toggleNav );
+
+export { toggleNav }
